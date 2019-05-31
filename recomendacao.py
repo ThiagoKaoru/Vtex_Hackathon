@@ -8,8 +8,7 @@ shelf_list = [(2,2),(3,2),(2,3),(3,3),(2,4),(3,4),(2,5),(3,5),(6,2),(5,2),(6,3),
 dic_trav={
     "up" = (travel_list[0],travel_list[1]+1)
     "down" = (travel_list[0],travel_list[1]-1,)
-    "left" = (travel_list[0]-1,travel_list[1])
-    "down" = (travel_list[0]+1,travel_list[1])
+    "right" = (travel_list[0]+1,travel_list[1])
 }
 #Shop_list e a lista de compras do consumidor
 market_map = {
@@ -21,16 +20,13 @@ list_location = []
 for product in shop_list:
     if product in market_map:
         list_location.append(market_map[product])
-
-
-if travel_list==(0,0):
-    for product in list_location:
-        if product[0][0] > travel_list[0][0]:
-            traveled= dic_trav["up"]
-            travel_list.append(traveled)
-        elif product[0][0] == travel_list[0][0] &     
-        elif product[0][1]> travel_list[0][1]:
-            traveled= dic_trav["right"]
+list_location = sorted(list_location)
+list_size = len(list_location)
+if travel_list == (0,0):
+    traveled = dic_trav["up"]
+    travel_list.append(traveled)
+if list_location[0][0]
+        
 
 
 
